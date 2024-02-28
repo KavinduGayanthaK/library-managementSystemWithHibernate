@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="794.0" prefWidth="1309.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.adminController.AdminDashboardFormController">
+   <children>
+      <AnchorPane layoutX="60.0" layoutY="35.0" prefHeight="160.0" prefWidth="304.0" style="-fx-background-color: yellow;">
+         <children>
+            <Label layoutX="37.0" layoutY="27.0" prefHeight="25.0" prefWidth="92.0" text="Total Book" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="62.0" layoutY="225.0" prefHeight="160.0" prefWidth="304.0" style="-fx-background-color: yellow;">
+         <children>
+            <Label layoutX="16.0" layoutY="44.0" prefHeight="25.0" prefWidth="92.0" text="Available Book" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="67.0" layoutY="424.0" prefHeight="160.0" prefWidth="304.0" style="-fx-background-color: yellow;">
+         <children>
+            <Label layoutX="23.0" layoutY="33.0" prefHeight="25.0" prefWidth="92.0" text="Total Members" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="69.0" layoutY="620.0" prefHeight="160.0" prefWidth="304.0" style="-fx-background-color: yellow;">
+         <children>
+            <Label layoutX="18.0" layoutY="41.0" prefHeight="25.0" prefWidth="92.0" text="Request Book" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

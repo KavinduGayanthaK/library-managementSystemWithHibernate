@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="794.0" prefWidth="1542.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.adminController.AdminNavigationFormController">
+   <children>
+      <AnchorPane layoutX="-3.0" prefHeight="800.0" prefWidth="318.0" style="-fx-background-color: gray;">
+         <children>
+            <JFXButton fx:id="btnDashboard" layoutX="115.0" layoutY="181.0" text="Dashboard" />
+            <JFXButton fx:id="btnBooks" layoutX="120.0" layoutY="221.0" text="Books" />
+            <JFXButton fx:id="btnMembers" layoutX="120.0" layoutY="269.0" text="Members" />
+            <JFXButton fx:id="btnBranchers" layoutX="121.0" layoutY="316.0" text="Branches" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

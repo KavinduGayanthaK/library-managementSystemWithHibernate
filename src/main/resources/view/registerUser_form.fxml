@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.RegisterUserFormController">
+    <children>
+        <TextField fx:id="txtUsername" layoutX="207.0" layoutY="104.0" onMouseClicked="#txtUsernameOnMouseClickedAction" promptText="username" />
+        <PasswordField fx:id="txtPassword" layoutX="206.0" layoutY="245.0" onAction="#registerBtnOnAction" onMouseClicked="#txtPasswordOnMouseClickedAction" promptText="password" />
+        <JFXButton fx:id="loginBtn" layoutX="230.0" layoutY="313.0" onAction="#registerBtnOnAction" text="Register" />
+        <TextField fx:id="txtEmail" layoutX="208.0" layoutY="175.0" promptText="email" />
+      <Label fx:id="lblPassword" layoutX="369.0" layoutY="202.0" prefHeight="62.0" prefWidth="206.0" text="Create a strong password with a mixture of letters, numbers and symbols" textAlignment="CENTER" wrapText="true" />
+      <Label fx:id="lblUsername" layoutX="388.0" layoutY="96.0" prefHeight="33.0" prefWidth="134.0" text="Use letters and numbers" textAlignment="CENTER" wrapText="true" />
+      <Label fx:id="lblInvalidEmail" layoutX="209.0" layoutY="208.0" prefHeight="10.0" prefWidth="118.0" text="Invalid email" />
+      <Label fx:id="lblInvalidUserName" layoutX="209.0" layoutY="137.0" prefHeight="10.0" prefWidth="118.0" text="Invalid username" />
+      <Label fx:id="lblInvalidPassword" layoutX="206.0" layoutY="274.0" prefHeight="10.0" prefWidth="118.0" text="Invalid password" />
+    </children>
+</AnchorPane>

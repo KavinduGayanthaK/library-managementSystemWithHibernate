@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.LoginFormController">
+   <children>
+      <TextField fx:id="txtUsername" layoutX="207.0" layoutY="104.0" promptText="username" />
+      <PasswordField fx:id="txtPassword" layoutX="207.0" layoutY="169.0" onAction="#loginBtnOnAction" promptText="password" />
+      <JFXButton fx:id="loginBtn" layoutX="256.0" layoutY="227.0" onAction="#loginBtnOnAction" text="Login" />
+      <Hyperlink layoutX="313.0" layoutY="228.0" onAction="#signInOnAction" text="sign in" />
+      <Label fx:id="lblInvalidUserName" layoutX="207.0" layoutY="136.0" prefHeight="10.0" prefWidth="118.0" text="Invalid username" />
+      <Label fx:id="lblInvalidPassword" layoutX="207.0" layoutY="202.0" prefHeight="10.0" prefWidth="118.0" text="Invalid password" />
+   </children>
+</AnchorPane>

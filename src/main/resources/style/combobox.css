@@ -1,0 +1,26 @@
+/* styles.css */
+.custom-combo-box .arrow-button {
+    -fx-background-color: #FFFFFF; /* Background color of the arrow button */
+    -fx-shape: ""; /* Remove default arrow shape */
+}
+
+.custom-combo-box .arrow-button:hover {
+    -fx-background-color: #E0E0E0; /* Hover color of the arrow button */
+}
+
+.custom-combo-box .arrow {
+    -fx-background-color: #000000; /* Color of the arrow */
+}
+
+.custom-combo-box .arrow:hover {
+    -fx-background-color: #666666; /* Hover color of the arrow */
+}
+
+.custom-combo-box .list-cell {
+    -fx-background-color: #FFFFFF; /* Background color of each item in the dropdown */
+    -fx-text-fill: #000000; /* Text color of each item in the dropdown */
+}
+
+.custom-combo-box .list-cell:hover {
+    -fx-background-color: #E0E0E0; /* Hover color of each item in the dropdown */
+}

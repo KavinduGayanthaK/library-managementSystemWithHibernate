@@ -17,43 +17,70 @@ public class UserServiceImpl implements UserService {
     UserDao userDao = new UserDaoImpl();
     @Override
     public boolean save(UserDto userDto) {
-        Session session = FactoryConfiguration.getFactoryConfiguration().getSession();
-        Transaction transaction = session.beginTransaction();
-        try{
-            boolean save = userDao.save(new User(
-                    userDto.getId(), userDto.getUsername(), userDto.getEmail(), userDto.getPassword()) , session);
-            transaction.commit();
-            return true;
-        }catch (Exception e) {
-            e.printStackTrace();
-            transaction.rollback();
-            return false;
-        }finally {
-            session.close();
-        }
+        boolean save = userDao.save(new User(
+                userDto.getId(), userDto.getUsername(), userDto.getEmail(), userDto.getPassword()));
+        return save;
     }
 
     @Override
     public List<UserDto> getAll() {
-        Session session = FactoryConfiguration.getFactoryConfiguration().getSession();
-        Transaction transaction = session.beginTransaction();
-        try{
-            List<UserDto> userDtos = new ArrayList<>();
-            for (User user: userDao.getAll(session)){
-                userDtos.add(new UserDto(
-                         user.getUsername(), user.getPassword()
-                ));
-                transaction.commit();
+        List<UserDto> userDtos = new ArrayList<>();
+        for (User user: userDao.getAll()) {
+            userDtos.add(new UserDto(
+                    user.getUsername(), user.getPassword()
+            ));
+        }
+        return userDtos;
+    }
+    @Override
+    public List<UserDto> getAll1() {
+        List<UserDto> userDtos = new ArrayList<>();
+        for (User user: userDao.getAll()) {
+            userDtos.add(new UserDto(
+                    user.getId(),user.getUsername(),user.getEmail(),user.getPassword()
+            ));
+        }
+        return userDtos;
+    }
 
+    @Override
+    public boolean update(String text) {
+        return userDao.updateUserName(text);
+    }
+
+    @Override
+    public boolean updatePassword(String encryptPassword) {
+        return userDao.updatePassword(encryptPassword);
+    }
+
+    @Override
+    public boolean updateEmail(String text) {
+        return userDao.updateEmail(text);
+    }
+
+    @Override
+    public String generateNewUserId() {
+        User user = userDao.generateNewId();
+        if(!(user.getId()==null)) {
+            return splitId(user.getId());
+        }
+        return splitId(null);
+
+    }
+
+    public String splitId(String currentUserId) {
+        if (currentUserId != null) {
+            String[] split = currentUserId.split("M");
+            int id = Integer.parseInt(split[1]);
+
+            id++;
+            if (id < 10) {
+                return "M00" + id;
+            } else {
+                return "M0" + id;
             }
-
-            return userDtos;
-        }catch (Exception e) {
-            e.printStackTrace();
-            transaction.rollback();
-            return null;
-        }finally {
-            session.close();
+        } else {
+            return "M001";
         }
     }
 }

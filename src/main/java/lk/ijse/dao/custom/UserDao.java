@@ -6,7 +6,14 @@ import org.hibernate.Session;
 import java.util.List;
 
 public interface UserDao {
-    boolean save(User user, Session session);
+    boolean save(User user);
 
-    List<User> getAll(Session session);
+    List<User> getAll();
+    public User generateNewId();
+
+    boolean updateUserName(String text);
+
+    boolean updatePassword(String encryptPassword);
+
+    boolean updateEmail(String text);
 }

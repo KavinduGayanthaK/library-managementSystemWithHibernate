@@ -1,20 +1,28 @@
-.JFXButton and:hover {
-    -fx-background-color: #42c923;
+.JFXButton:hover {
+    -fx-background-color: #ffffff;
     -fx-scale-y: 1.1;
+    -fx-text-fill: black;
 }
 .JFXButton:pressed:hover {
     -fx-scale-y: 0.9;
     -fx-scale-x: 0.9;
-}
-.button:pressed:hover {
-    -fx-scale-y: 0.9;
-    -fx-scale-x: 0.9;
-}
-.button:hover {
-    -fx-background-color: #42c923;
-    -fx-scale-y: 1.1;
-}
-.JFXButton{
-    -fx-background-color: #dd16ff;
+    -fx-background-color: #ffffff;
+    -fx-text-fill: black;
 
+}
+
+.JFXButton{
+    -fx-background-color: rgb(14, 14, 14);
+
+}
+.textFill{
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-font-size: 22px;
+    -fx-font-family: fantasy;
+}
+.AnchorPane{
+    -fx-border-radius: 0,10,10,0;
+    -fx-background-radius: 0,10,10,0;
+    -fx-background-color: rgb(14, 14, 14);
 }

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="593.0" prefWidth="616.0" styleClass="mainPane" stylesheets="@../../../style/viewOneBook.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.adminController.books.ViewOneBookDetailsFormController">
+   <children>
+      <ImageView fx:id="lmgBook" fitHeight="347.0" fitWidth="363.0" layoutX="25.0" layoutY="72.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../../../../../../../../../Pictures/1000_F_570856888_T0tezLdREv8EDFfLoEhLA6pApyFnmMaL.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblStatus" alignment="CENTER" layoutX="122.0" layoutY="427.0" prefHeight="30.0" prefWidth="117.0" styleClass="lblStatus" stylesheets="@../../../style/viewOneBook.css" text="status" textAlignment="CENTER" />
+      <Label layoutX="402.0" layoutY="74.0" prefHeight="25.0" prefWidth="152.0" styleClass="lblTextField" stylesheets="@../../../style/viewOneBook.css" text="Author Name" />
+      <TextField fx:id="txtAuthorName" layoutX="402.0" layoutY="99.0" styleClass="textField" stylesheets="@../../../style/viewOneBook.css" />
+      <Label layoutX="402.0" layoutY="175.0" prefHeight="25.0" prefWidth="152.0" styleClass="lblTextField" stylesheets="@../../../style/viewOneBook.css" text="Book ID" />
+      <TextField fx:id="txtBookId" layoutX="402.0" layoutY="198.0" styleClass="textField" stylesheets="@../../../style/viewOneBook.css" />
+      <Label layoutX="404.0" layoutY="271.0" prefHeight="25.0" prefWidth="152.0" styleClass="lblTextField" stylesheets="@../../../style/viewOneBook.css" text="Book Title" />
+      <TextField fx:id="txtBookTitle" layoutX="404.0" layoutY="296.0" styleClass="textField" stylesheets="@../../../style/viewOneBook.css" />
+      <ComboBox fx:id="cmbGenre" layoutX="397.0" layoutY="442.0" onAction="#cmbGenreOnAction" prefHeight="45.0" prefWidth="201.0" promptText="Select genre" stylesheets="@../../../style/combobox.css">
+         <styleClass>
+            <String fx:value="arrow" />
+            <String fx:value="arrow-button" />
+            <String fx:value="btnPane" />
+            <String fx:value="custom-combo-box" />
+            <String fx:value="lblTextField" />
+            <String fx:value="lblTitled" />
+            <String fx:value="list-cell" />
+            <String fx:value="mainPane" />
+            <String fx:value="mainPane" />
+            <String fx:value="titledPane" />
+         </styleClass></ComboBox>
+      <Label layoutX="404.0" layoutY="137.0" prefHeight="25.0" prefWidth="152.0" text="Invalid label" />
+      <Label layoutX="404.0" layoutY="237.0" prefHeight="25.0" prefWidth="152.0" text="Invalid label" />
+      <Label layoutX="404.0" layoutY="337.0" prefHeight="25.0" prefWidth="152.0" text="Invalid label" />
+      <Pane layoutY="529.0" prefHeight="64.0" prefWidth="616.0" styleClass="btnPane" stylesheets="@../../../style/viewOneBook.css">
+         <children>
+            <JFXButton fx:id="btnUpdate" layoutX="519.0" layoutY="17.0" onAction="#btnUpdateOnAction" text="UPDATE" />
+            <JFXButton fx:id="btnDelete" layoutX="454.0" layoutY="17.0" onAction="#btnDeleteOnAction" text="DELETE" />
+            <JFXButton fx:id="btnCancel" layoutX="28.0" layoutY="16.0" onAction="#btnCancelOnAction" text="CANCEL" />
+         </children>
+      </Pane>
+      <Pane prefHeight="64.0" prefWidth="616.0" styleClass="titledPane" stylesheets="@../../../style/viewOneBook.css">
+         <children>
+            <Label fx:id="lblTitle" alignment="CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="10.0" prefHeight="47.0" prefWidth="363.0" styleClass="lblTitled" stylesheets="@../../../style/viewOneBook.css" text="Title" />
+         </children>
+      </Pane>
+      <Label layoutX="400.0" layoutY="363.0" prefHeight="25.0" prefWidth="152.0" styleClass="lblTextField" stylesheets="@../../../style/viewOneBook.css" text="Genre" />
+      <TextField fx:id="txtGenre" layoutX="401.0" layoutY="386.0" styleClass="textField" stylesheets="@../../../style/viewOneBook.css" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="794.0" prefWidth="1309.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.adminController.BranchFormController">
+   <children>
+      <TableView fx:id="tblBranch" layoutX="111.0" layoutY="61.0" prefHeight="659.0" prefWidth="1176.0">
+        <columns>
+          <TableColumn prefWidth="151.19997787475586" text="Branch Id" />
+          <TableColumn minWidth="0.0" prefWidth="197.6000518798828" text="Branch Name" />
+            <TableColumn minWidth="0.0" prefWidth="182.39996337890625" text="City" />
+            <TableColumn minWidth="0.0" prefWidth="325.60003662109375" text="Address" />
+            <TableColumn minWidth="0.0" prefWidth="152.79986572265625" text="Postal code" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="1142.0" layoutY="14.0" onAction="#addBranchBtn" prefHeight="31.0" prefWidth="123.0" text="Add Branch" />
+   </children>
+</AnchorPane>

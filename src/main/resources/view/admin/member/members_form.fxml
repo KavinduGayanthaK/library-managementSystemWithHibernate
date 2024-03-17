@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="lk.ijse.controller.adminController.member.MembersFormController"
+            prefHeight="794.0" prefWidth="1309.0">
+    <children>
+        <TabPane prefHeight="794.0" prefWidth="1309.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab fx:id="memberDetailsTab" text="Member Details">
+                    <content>
+                        <fx:include source="memberDetails_form.fxml"/>
+                    </content>
+                </Tab>
+                <Tab fx:id="memberTransactionTab" text="Member Transaction">
+                    <content>
+                        <fx:include source="memberTransaction_form.fxml"/>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+
+</AnchorPane>

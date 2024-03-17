@@ -5,15 +5,29 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.LoginFormController">
+<AnchorPane prefHeight="400.0" prefWidth="598.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.LoginFormController">
    <children>
-      <TextField fx:id="txtUsername" layoutX="207.0" layoutY="104.0" promptText="username" />
-      <PasswordField fx:id="txtPassword" layoutX="207.0" layoutY="169.0" onAction="#loginBtnOnAction" promptText="password" />
-      <JFXButton fx:id="loginBtn" layoutX="256.0" layoutY="227.0" onAction="#loginBtnOnAction" text="Login" />
-      <Hyperlink layoutX="313.0" layoutY="228.0" onAction="#signInOnAction" text="sign in" />
-      <Label fx:id="lblInvalidUserName" layoutX="207.0" layoutY="136.0" prefHeight="10.0" prefWidth="118.0" text="Invalid username" />
-      <Label fx:id="lblInvalidPassword" layoutX="207.0" layoutY="202.0" prefHeight="10.0" prefWidth="118.0" text="Invalid password" />
+      <ImageView fitHeight="400.0" fitWidth="335.0" layoutX="268.0" opacity="0.65" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/pexels-janko-ferlic-590493.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="313.0" layoutY="40.0" opacity="0.75" prefHeight="341.0" prefWidth="268.0" style="-fx-background-color: white; -fx-border-radius: 10px; -fx-background-radius: 10px;" />
+      <TextField fx:id="txtUsername" layoutX="329.0" layoutY="86.0" promptText="username" stylesheets="@../style/loginForm.css" />
+      <PasswordField fx:id="txtPassword" layoutX="329.0" layoutY="170.0" onAction="#loginBtnOnAction" promptText="password" stylesheets="@../style/loginForm.css" />
+      <JFXButton fx:id="loginBtn" layoutX="339.0" layoutY="289.0" onAction="#loginBtnOnAction" styleClass="registerBtn" stylesheets="@../style/loginForm.css" text="Login" />
+      <Hyperlink fx:id="signIn" layoutX="498.0" layoutY="288.0" onAction="#signInOnAction" prefHeight="38.0" prefWidth="63.0" styleClass="signBtn" stylesheets="@../style/loginForm.css" text="sign in" />
+      <Label fx:id="lblInvalidUserName" layoutX="329.0" layoutY="131.0" prefHeight="10.0" prefWidth="118.0" stylesheets="@../style/loginForm.css" text="Invalid username" />
+      <Label fx:id="lblInvalidPassword" layoutX="329.0" layoutY="219.0" prefHeight="10.0" prefWidth="118.0" stylesheets="@../style/loginForm.css" text="Invalid password" />
+      <Pane prefHeight="400.0" prefWidth="268.0" styleClass="pane" stylesheets="@../style/loginForm.css">
+         <children>
+            <Label layoutX="33.0" layoutY="60.0" prefHeight="171.0" prefWidth="201.0" styleClass="welcomeLabel" stylesheets="@../style/loginForm.css" text="Welcome to LibraVerse" textAlignment="CENTER" wrapText="true" />
+         </children>
+      </Pane>
    </children>
 </AnchorPane>

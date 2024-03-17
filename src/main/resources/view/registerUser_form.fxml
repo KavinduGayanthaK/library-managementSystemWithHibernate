@@ -4,18 +4,28 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.RegisterUserFormController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="pane" stylesheets="@../style/register.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.RegisterUserFormController">
     <children>
-        <TextField fx:id="txtUsername" layoutX="207.0" layoutY="104.0" onMouseClicked="#txtUsernameOnMouseClickedAction" promptText="username" />
-        <PasswordField fx:id="txtPassword" layoutX="206.0" layoutY="245.0" onAction="#registerBtnOnAction" onMouseClicked="#txtPasswordOnMouseClickedAction" promptText="password" />
-        <JFXButton fx:id="loginBtn" layoutX="230.0" layoutY="313.0" onAction="#registerBtnOnAction" text="Register" />
-        <TextField fx:id="txtEmail" layoutX="208.0" layoutY="175.0" promptText="email" />
-      <Label fx:id="lblPassword" layoutX="369.0" layoutY="202.0" prefHeight="62.0" prefWidth="206.0" text="Create a strong password with a mixture of letters, numbers and symbols" textAlignment="CENTER" wrapText="true" />
-      <Label fx:id="lblUsername" layoutX="388.0" layoutY="96.0" prefHeight="33.0" prefWidth="134.0" text="Use letters and numbers" textAlignment="CENTER" wrapText="true" />
-      <Label fx:id="lblInvalidEmail" layoutX="209.0" layoutY="208.0" prefHeight="10.0" prefWidth="118.0" text="Invalid email" />
-      <Label fx:id="lblInvalidUserName" layoutX="209.0" layoutY="137.0" prefHeight="10.0" prefWidth="118.0" text="Invalid username" />
-      <Label fx:id="lblInvalidPassword" layoutX="206.0" layoutY="274.0" prefHeight="10.0" prefWidth="118.0" text="Invalid password" />
+      <ImageView fitHeight="400.0" fitWidth="294.0" opacity="0.79" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/pexels-janko-ferlic-590493.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="137.0" layoutY="41.0" opacity="0.75" prefHeight="342.0" prefWidth="275.0" style="-fx-background-color: white; -fx-border-radius: 10px; -fx-background-radius: 10px;" />
+        <TextField fx:id="txtUsername" layoutX="168.0" layoutY="78.0" onMouseClicked="#txtUsernameOnMouseClickedAction" promptText="username" styleClass="text-field" stylesheets="@../style/register.css" />
+        <PasswordField fx:id="txtPassword" layoutX="171.0" layoutY="233.0" onAction="#registerBtnOnAction" onMouseClicked="#txtPasswordOnMouseClickedAction" promptText="password" stylesheets="@../style/register.css" />
+        <TextField fx:id="txtEmail" layoutX="168.0" layoutY="161.0" promptText="email" styleClass="text-field" stylesheets="@../style/register.css" />
+        <JFXButton fx:id="loginBtn" layoutX="240.0" layoutY="323.0" onAction="#registerBtnOnAction" styleClass="registerBtn" stylesheets="@../style/register.css" text="Register" />
+      <Label fx:id="lblPassword" layoutX="372.0" layoutY="213.0" prefHeight="74.0" prefWidth="222.0" styleClass="notifyLabel" stylesheets="@../style/register.css" text="Create a strong password with a mixture of letters, numbers and symbols" textAlignment="CENTER" wrapText="true" />
+      <Label fx:id="lblUsername" layoutX="384.0" layoutY="80.0" prefHeight="34.0" prefWidth="173.0" styleClass="notifyLabel" stylesheets="@../style/register.css" text="Use letters and numbers" textAlignment="CENTER" wrapText="true" />
+      <Label fx:id="lblInvalidEmail" layoutX="171.0" layoutY="202.0" prefHeight="10.0" prefWidth="118.0" styleClass="invalidLabel" stylesheets="@../style/register.css" text="Invalid email" />
+      <Label fx:id="lblInvalidUserName" layoutX="170.0" layoutY="123.0" prefHeight="10.0" prefWidth="118.0" styleClass="invalidLabel" stylesheets="@../style/register.css" text="Invalid username" />
+      <Label fx:id="lblInvalidPassword" layoutX="171.0" layoutY="278.0" prefHeight="10.0" prefWidth="118.0" styleClass="invalidLabel" stylesheets="@../style/register.css" text="Invalid password" />
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="38.0" prefWidth="201.0" styleClass="lblRegister" stylesheets="@../style/register.css" text="Register Form" />
     </children>
 </AnchorPane>

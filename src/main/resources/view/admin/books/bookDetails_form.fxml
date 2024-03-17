@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="794.0" prefWidth="1309.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.adminController.books.BookDetailsFormController">
+   <children>
+      <ComboBox fx:id="cmbCategory" layoutX="25.0" layoutY="13.0" onAction="#cmbCategoryOnAction" prefHeight="25.0" prefWidth="190.0" promptText="Catrgory" stylesheets="@../../../style/combobox.css">
+         <styleClass>
+            <String fx:value="arrow" />
+            <String fx:value="arrow-button" />
+            <String fx:value="custom-combo-box" />
+            <String fx:value="list-cell" />
+         </styleClass></ComboBox>
+      <JFXButton fx:id="addBookBtn" layoutX="1201.0" layoutY="13.0" onAction="#addBookBtnOnAction" prefHeight="25.0" prefWidth="80.0" text="ADD BOOK" />
+      <ScrollPane layoutX="55.0" layoutY="64.0" prefHeight="643.0" prefWidth="1199.0">
+         <content>
+            <GridPane fx:id="gridPane" prefHeight="0.0" prefWidth="187.0" style="-fx-background-color: white;">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+            </GridPane>
+         </content>
+      </ScrollPane>
+      <Label fx:id="lblCategory" alignment="CENTER" layoutX="573.0" layoutY="46.0" prefHeight="36.0" prefWidth="190.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+
+   </children>
+</AnchorPane>

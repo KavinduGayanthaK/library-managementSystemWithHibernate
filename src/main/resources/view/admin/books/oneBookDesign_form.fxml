@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane onMouseClicked="#showDetailOnAction" prefHeight="148.0" prefWidth="977.0" style="-fx-background-radius: 20; -fx-background-color: #005a39;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.adminController.books.OneBookDesignFormController">
+   <children>
+      <Label layoutX="8.0" layoutY="131.0" prefHeight="17.0" prefWidth="1043.0" textFill="WHITE" />
+      <ImageView fx:id="imageView" fitHeight="136.0" fitWidth="117.0" layoutX="17.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="333.0" layoutY="33.0" text="Book Title" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="491.0" layoutY="33.0" text="Author" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="661.0" layoutY="33.0" text="Genre" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="820.0" layoutY="33.0" text="Status" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblBookTitle" layoutX="333.0" layoutY="73.0" prefHeight="58.0" prefWidth="120.0" text="1" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAuthor" layoutX="490.0" layoutY="73.0" prefHeight="58.0" prefWidth="128.0" text="1" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblGenre" layoutX="663.0" layoutY="73.0" prefHeight="48.0" prefWidth="120.0" text="1" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblStatus" layoutX="823.0" layoutY="73.0" prefHeight="26.0" prefWidth="117.0" text="1" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="17.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnQuickAdd" buttonType="RAISED" layoutX="955.0" layoutY="47.0" onAction="#btnQuickAddOnAction" prefHeight="48.0" prefWidth="120.0" style="-fx-background-color: #0045b5; -fx-background-radius: 30;" text="Quick Add" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="128.0" layoutY="24.0" text="Book Id" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblBookId" layoutX="128.0" layoutY="64.0" prefHeight="58.0" prefWidth="120.0" text="1" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,6 +1,7 @@
 package lk.ijse.config;
 
-import lk.ijse.entity.User;
+import lk.ijse.entity.*;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;
@@ -17,7 +18,12 @@ public class FactoryConfiguration {
         standardServiceRegistryBuilder.loadProperties("hibernate.properties");
         MetadataSources metadataSources = new MetadataSources(standardServiceRegistryBuilder.build());
         metadataSources.
-                addAnnotatedClass(User.class);
+                addAnnotatedClass(User.class).
+                addAnnotatedClass(Book.class).
+                addAnnotatedClass(Admin.class).
+                addAnnotatedClass(BorrowTransaction.class).addAnnotatedClass(Branch.class);
+
+
         Metadata metadata = metadataSources.getMetadataBuilder().build();
         sessionFactory = metadata.getSessionFactoryBuilder().build();
 

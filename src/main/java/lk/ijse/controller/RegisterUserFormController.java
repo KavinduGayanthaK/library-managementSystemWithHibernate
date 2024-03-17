@@ -69,7 +69,8 @@ public class RegisterUserFormController {
 
     @FXML
     void registerBtnOnAction(ActionEvent event) throws IOException {
-        userDto.setId(0);
+        String userId = generateNextId();
+        userDto.setId(userId);
         boolean validateUserName = validateUserName(txtUsername.getText());
         if (validateUserName) {
             userDto.setUsername(txtUsername.getText());
@@ -101,12 +102,18 @@ public class RegisterUserFormController {
         }
     }
 
+    private String generateNextId() {
+        String userId = userService.generateNewUserId();
+        return userId;
+    }
     private String encriptPassword(String text) {
         String encryptValue = new String(Base64.encodeBase64(text.getBytes(StandardCharsets.UTF_8)));
         return encryptValue;
     }
 
     private void loadLoginPage() throws IOException {
+        Stage stage1 = (Stage) loginBtn.getScene().getWindow();
+        stage1.close();
         Stage stage = new Stage();
         stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/login_form.fxml"))));
         stage.show();
@@ -129,11 +136,13 @@ public class RegisterUserFormController {
 
     @FXML
     void txtPasswordOnMouseClickedAction(MouseEvent event) {
+        lblUsername.setVisible(false);
         lblPassword.setVisible(true);
     }
 
     @FXML
     void txtUsernameOnMouseClickedAction(MouseEvent event) {
+        lblPassword.setVisible(false);
         lblUsername.setVisible(true);
     }
 

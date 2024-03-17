@@ -1,0 +1,36 @@
+.btnPane{
+    -fx-background-radius: 10 10 0 0;
+    -fx-background-insets: 0;
+    -fx-background-color: #c8deff;
+}
+
+.titledPane{
+    -fx-background-color: #0e0e0e;
+    -fx-background-radius: 0 0 10 10;
+    -fx-background-insets: 0;
+}
+.lblTitled{
+    -fx-font-size: 24px;
+    -fx-text-fill: white;
+}
+.mainPane{
+    -fx-background-color: #f6dbc4;
+}
+
+.lblTextField{
+    -fx-text-fill: black;
+    -fx-font-size: 16px;
+}
+
+.textField{
+    -fx-border-color: #999292;
+    -fx-font-size: 16px;
+    -fx-text-fill: #000000;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+
+.lblStatus{
+    -fx-text-fill: blue;
+    -fx-font-size: 20px;
+}

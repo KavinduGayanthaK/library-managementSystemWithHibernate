@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="593.0" prefWidth="447.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.userController.book.ViewOneBookDetailsFormController">
+   <children>
+      <ImageView fx:id="lmgBook" fitHeight="347.0" fitWidth="363.0" layoutX="42.0" layoutY="66.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../../../../../../../../../Pictures/1000_F_570856888_T0tezLdREv8EDFfLoEhLA6pApyFnmMaL.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblStatus" alignment="CENTER" layoutX="122.0" layoutY="427.0" prefHeight="37.0" prefWidth="150.0" text="status" textAlignment="CENTER" />
+      <Pane prefHeight="50.0" prefWidth="447.0">
+         <children>
+            <Label fx:id="lblTitle" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="3.0" prefHeight="44.0" prefWidth="243.0" text="Title" />
+         </children>
+      </Pane>
+      <Label fx:id="lblAuthor" alignment="CENTER" contentDisplay="CENTER" layoutX="25.0" layoutY="475.0" prefHeight="38.0" prefWidth="196.0" text="Author" />
+      <Label fx:id="lblGenre" alignment="CENTER" contentDisplay="CENTER" layoutX="24.0" layoutY="527.0" prefHeight="38.0" prefWidth="196.0" text="Genre" />
+   </children>
+</AnchorPane>

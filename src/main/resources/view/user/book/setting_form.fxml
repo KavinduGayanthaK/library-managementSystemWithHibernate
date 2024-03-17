@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.userController.SettingFormController">
+    <children>
+        <AnchorPane layoutX="13.0" layoutY="13.0" prefHeight="767.0" prefWidth="1283.0" style="-fx-background-radius: 15px; -fx-background-color: #FFFFFF;">
+            <children>
+                <AnchorPane fx:id="root1" layoutX="46.0" layoutY="64.0" prefHeight="685.0" prefWidth="1191.0">
+                    <children>
+                        <AnchorPane layoutX="54.0" layoutY="246.0" prefHeight="200.0" prefWidth="1082.0" style="-fx-background-color: #FFFFFF; -fx-border-radius: 10px; -fx-background-radius: 10px;">
+                            <children>
+                                <Separator layoutX="204.0" orientation="VERTICAL" prefHeight="194.0" prefWidth="7.0" />
+                                <TextField fx:id="txtNewPassword" layoutX="271.0" layoutY="67.0" prefHeight="48.0" prefWidth="249.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px;" styleClass="text-field" stylesheets="@../style/uiSettings.css" />
+                                <Label layoutX="275.0" layoutY="38.0" prefHeight="27.0" prefWidth="182.0" styleClass="lable" stylesheets="@../style/uiSettings.css" text="New Password" />
+                                <TextField fx:id="txtConfirmPassword" layoutX="792.0" layoutY="67.0" prefHeight="48.0" prefWidth="249.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px;" styleClass="text-field" stylesheets="@../style/uiSettings.css" />
+                                <Label layoutX="795.0" layoutY="39.0" prefHeight="27.0" prefWidth="182.0" styleClass="lable" stylesheets="@../style/uiSettings.css" text="Comfirm Password" />
+                                <JFXButton layoutX="867.0" layoutY="136.0" onAction="#passwordChangeBtnOnAction" prefHeight="39.0" prefWidth="160.0" styleClass="calender" stylesheets="@../style/gradiant.css" text="CHANGE">
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                </JFXButton>
+                                <ImageView fitHeight="201.0" fitWidth="182.0" layoutX="23.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../assets/icons8-admin-94.png" />
+                                    </image>
+                                </ImageView>
+                                <Label fx:id="lblNewPassword" layoutX="514.0" layoutY="118.0" prefHeight="18.0" prefWidth="118.0" textFill="#f40000" />
+                                <Label fx:id="lblConfirmPassword" layoutX="799.0" layoutY="118.0" prefHeight="18.0" prefWidth="118.0" textFill="#f40000" />
+                            </children>
+                        </AnchorPane>
+                  <AnchorPane layoutX="54.0" layoutY="36.0" prefHeight="182.0" prefWidth="1082.0" style="-fx-background-color: #FFFFFF; -fx-border-radius: 10px; -fx-background-radius: 10px;">
+                     <children>
+                        <Separator layoutX="204.0" orientation="VERTICAL" prefHeight="193.0" prefWidth="7.0" />
+                        <TextField fx:id="txtNewUserName" layoutX="270.0" layoutY="67.0" prefHeight="48.0" prefWidth="249.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px;" styleClass="text-field" stylesheets="@../style/uiSettings.css" />
+                        <Label layoutX="274.0" layoutY="38.0" prefHeight="27.0" prefWidth="182.0" styleClass="lable" stylesheets="@../style/uiSettings.css" text="New username" />
+                        <TextField fx:id="txtConfirmUserName" layoutX="796.0" layoutY="67.0" prefHeight="48.0" prefWidth="249.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px;" styleClass="text-field" stylesheets="@../style/uiSettings.css" />
+                        <Label layoutX="799.0" layoutY="39.0" prefHeight="27.0" prefWidth="182.0" styleClass="lable" stylesheets="@../style/uiSettings.css" text="Comfirm username" />
+                        <JFXButton layoutX="874.0" layoutY="136.0" onAction="#usernameChangeBtnOnAction" prefHeight="39.0" prefWidth="160.0" text="CHANGE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <ImageView fitHeight="201.0" fitWidth="182.0" layoutX="23.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../assets/icons8-admin-94.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="lblNewPassword1" layoutX="514.0" layoutY="118.0" prefHeight="18.0" prefWidth="118.0" textFill="#f40000" />
+                        <Label fx:id="lblConfirmPassword1" layoutX="799.0" layoutY="118.0" prefHeight="18.0" prefWidth="118.0" textFill="#f40000" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="54.0" layoutY="476.0" prefHeight="194.0" prefWidth="1082.0" style="-fx-background-color: #FFFFFF; -fx-border-radius: 10px; -fx-background-radius: 10px;">
+                     <children>
+                        <Separator layoutX="204.0" orientation="VERTICAL" prefHeight="194.0" prefWidth="7.0" />
+                        <TextField fx:id="txtNewEmail" layoutX="285.0" layoutY="67.0" prefHeight="48.0" prefWidth="249.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px;" styleClass="text-field" stylesheets="@../style/uiSettings.css" />
+                        <Label layoutX="289.0" layoutY="38.0" prefHeight="27.0" prefWidth="182.0" styleClass="lable" stylesheets="@../style/uiSettings.css" text="New Email" />
+                        <TextField fx:id="txtConfirmEmail" layoutX="796.0" layoutY="67.0" prefHeight="48.0" prefWidth="249.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px;" styleClass="text-field" stylesheets="@../style/uiSettings.css" />
+                        <Label layoutX="796.0" layoutY="38.0" prefHeight="27.0" prefWidth="182.0" styleClass="lable" stylesheets="@../style/uiSettings.css" text="Comfirm Email" />
+                        <JFXButton layoutX="894.0" layoutY="136.0" onAction="#emailChangeBtnOnAction" prefHeight="39.0" prefWidth="160.0" text="CHANGE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <ImageView fitHeight="201.0" fitWidth="182.0" layoutX="23.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../assets/icons8-admin-94.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="lblNewPassword2" layoutX="514.0" layoutY="118.0" prefHeight="18.0" prefWidth="118.0" textFill="#f40000" />
+                        <Label fx:id="lblConfirmPassword2" layoutX="799.0" layoutY="118.0" prefHeight="18.0" prefWidth="118.0" textFill="#f40000" />
+                     </children>
+                  </AnchorPane>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+
+</AnchorPane>

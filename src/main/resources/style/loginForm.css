@@ -1,0 +1,36 @@
+.text-field {
+    -fx-border-color: #999292;
+    -fx-font-size: 16px;
+    -fx-text-fill: #000000;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+
+.registerBtn {
+    -fx-background-color: linear-gradient(to right, #a90388, #4887fd);
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+
+}
+.invalidLabel{
+    -fx-font-size: 13px;
+    -fx-text-fill: red;
+}
+.signBtn {
+    -fx-background-color: linear-gradient(to right, #087fe0, #50c9f3);
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+
+}
+.pane{
+    -fx-border-radius: 0,10,10,0;
+    fx-background-radius: 0 10 0 10;
+    -fx-background-color:  linear-gradient(to right,#83868a, #2f2c2c);
+}
+.welcomeLabel{
+    -fx-font-size: 28px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}

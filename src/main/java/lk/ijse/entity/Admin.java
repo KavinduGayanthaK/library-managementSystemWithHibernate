@@ -5,10 +5,9 @@ import jakarta.persistence.*;
 @Entity(name = "admin")
 public class Admin {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private String id;
     @Column(nullable = false , length = 40)
-    private String username;
+    private String name;
     @Column(nullable = false ,length = 60)
     private String email;
     @Column(nullable = false,length = 50)
@@ -17,27 +16,27 @@ public class Admin {
     public Admin() {
     }
 
-    public Admin(int id, String username, String email, String password) {
+    public Admin(String id, String name, String email, String password) {
         this.id = id;
-        this.username = username;
+        this.name = name;
         this.email = email;
         this.password = password;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getName() {
+        return name;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getEmail() {
@@ -60,7 +59,7 @@ public class Admin {
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", username='" + username + '\'' +
+                ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 '}';
